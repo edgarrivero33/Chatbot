@@ -43,3 +43,66 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
+- story: linked_list_traversal_sad_path
+  steps:
+  - intent: linked_list_traversal
+  - action: utter_linked_list_traversal_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: primitive_data_type_happy_path
+  steps:
+  - intent: primitive_data_type
+  - action: utter_primitive_data_type_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: primitive_data_type_sad_path
+  steps:
+  - intent: primitive_data_type
+  - action: utter_primitive_data_type_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: boolean_happy_path
+  steps:
+  - intent: boolean
+  - action: utter_boolean_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: boolean_sad_path
+  steps:
+  - intent: boolean
+  - action: utter_boolean_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: swtich_statement_happy_path
+  steps:
+  - intent: switch_statement
+  - action: utter_switch_statement_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: swtich_statement_happy_path
+  steps:
+  - intent: switch_statement
+  - action: utter_switch_statement_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: variable_declaration_happy_path
+  steps:
+  - intent: variable_declaration
+  - action: utter_variable_declaration_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: variable_declaration_sad_path
+  steps:
+  - intent: variable_declaration
+  - action: utter_variable_declaration_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up

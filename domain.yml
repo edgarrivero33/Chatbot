@@ -11,6 +11,10 @@ intents:
   - main_menu
   - give_time
   - linked_list_traversal
+  - primitive_data_type
+  - boolean
+  - switch_statement
+  - variable_declaration
 actions:
   - action_show_time
 responses:
@@ -34,45 +38,72 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_main_menu:
-  - text: "These are the options to choose from:\nBasicOperations\nVariables\nMethods\nif and else statements\nfor loops\nwhile loops\nScanner\nSwitch statements
+  - text: "These are the options to choose from:\nBasic Operations\nVariables\nMethods\nif and else statements\nfor loops\nwhile loops\nScanner\nSwitch statements
   \nRecursion\nArrays\nObjects\nData structures\nPlease tell me what you would like to learn more about."
   utter_linked_list_traversal_ex:
   - text: "A linked list is represented by a pointer to the first node of the linked list. The first node is called the head of the linked list. If the linked list is empty, then the value of the head points to NULL.\nEach node in a list consists of at least two parts:\nA Data Item (we can store integer, strings, or any type of data).\nPointer (Or Reference) to the next node (connects one node to another) or An address of another node\nHere is an example of how traversal is done to print the linked list.\n
    def printList(self):\n
-        temp = self.head\n
-        while (temp):\n
+       temp = self.head\n
+       while (temp):\n
             print(temp.data)\n
             temp = temp.next"
-
-  utter_operations_ex:
-    - text: "I am a bot, powered by Rasa."
-  utter_variables_ex:
-    - text: "I am a bot, powered by Rasa."
-  utter_methods_ex:
-    - text: "I am a bot, powered by Rasa."
-  utter_if_else_ex:
-    - text: "I am a bot, powered by Rasa."
-  utter_for_loop_ex:
-    - text: "I am a bot, powered by Rasa."
-  utter_while_loop_ex:
-    - text: "I am a bot, powered by Rasa."
-  utter_scanner_ex:
-    - text: "I am a bot, powered by Rasa."
+  utter_primitive_data_type_ex:
+  - text: "A primitive data type is either a data type that is built into a programming language, or one that could be characterized as a basic structure for building more sophisticated data types.\nProgrammers will often be immediately familiar with the primitive data types used in coding, which do not involve more sophisticated data sets for effective representation."
+  utter_boolean_ex:
+  - text: "In computer programs, there are three types of data: text, numbers and Booleans. A Boolean data type is a value that can only be either true or false"
   utter_switch_statement_ex:
+  - text: "The switch statement evaluates an expression, matching the expression's value against a series of case clauses, and executes statements after the first case clause with a matching value, until a break statement is encountered.\nThe default clause of a switch statement will be jumped to if no case matches the expression's value.\n
+  int x = 4;\n
+  switch(x) {\n
+    case 1:\n
+       // code statements\n
+       break;\n
+    case 2:\n
+       // code statements\n
+       break;\n
+    case 3:\n
+       // code statements\n
+       break;\n
+    case 4:\n
+       System.out.println(1);\n
+       break;\n
+}"
+  utter_variable_declaration_ex:
+  - text:  "To declare (create) a variable, you will specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (;).\nJava uses the keyword int for integer, double for a floating point number (a double precision number), and boolean for a Boolean value (true or false).\n
+
+    ex:\n
+    int score;"
+
+
+  utter_operations_menu:
     - text: "I am a bot, powered by Rasa."
-  utter_recursion_ex:
+  utter_variables_menu:
     - text: "I am a bot, powered by Rasa."
-  utter_arrays_ex:
+  utter_methods_menu:
     - text: "I am a bot, powered by Rasa."
-  utter_object_ex:
+  utter_if_else_menu:
     - text: "I am a bot, powered by Rasa."
-  utter_linked_list_ex:
+  utter_for_loop_menu:
     - text: "I am a bot, powered by Rasa."
-  utter_stack_ex:
+  utter_while_loop_menu:
     - text: "I am a bot, powered by Rasa."
-  utter_queue_ex:
+  utter_scanner_menu:
     - text: "I am a bot, powered by Rasa."
-  utter_binary_trees_ex:
+  utter_switch_statement_menu:
+    - text: "I am a bot, powered by Rasa."
+  utter_recursion_menu:
+    - text: "I am a bot, powered by Rasa."
+  utter_arrays_menu:
+    - text: "I am a bot, powered by Rasa."
+  utter_object_menu:
+    - text: "I am a bot, powered by Rasa."
+  utter_linked_list_menu:
+    - text: "I am a bot, powered by Rasa."
+  utter_stack_menu:
+    - text: "I am a bot, powered by Rasa."
+  utter_queue_menu:
+    - text: "I am a bot, powered by Rasa."
+  utter_binary_trees_menu:
     - text: "I am a bot, powered by Rasa."
 
 session_config:

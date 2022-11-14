@@ -107,3 +107,28 @@ nlu:
     - I want to learn more about linked lists and how traversal works
     - I want to learn about linked list traversal
     - I want to learn how to traverse a linked list
+- intent: primitive_data_type
+  examples: |
+    - I want to learn about data types
+    - primitive
+    - data types
+- intent: boolean
+  examples: |
+    - What is a boolean?
+    - Boolean
+    - bool
+- intent: switch_statement
+  examples: |
+    - What is a switch statement?
+    - switch
+    - switch statement
+    - switch statements
+    - What is a switch case and how do you implement one in Java?
+- intent: variable_declaration
+  examples: |
+    - How to declare a variable?
+    - var declaration
+    - variable declaration
+    - How do I declare a variable in java?
+- intent:
+
