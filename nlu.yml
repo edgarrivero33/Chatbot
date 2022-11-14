@@ -130,5 +130,29 @@ nlu:
     - var declaration
     - variable declaration
     - How do I declare a variable in java?
-- intent:
-
+- intent: if_statements
+  examples: |
+    - What are if statements?
+    - if statement
+    - What is an if statement?
+- intent: if_statement_ex
+  examples: |
+    - if example
+    - examples of if
+    - if ex
+- intent: if_else_statement
+  examples: |
+    - what is an if/else
+    - if else
+    - else
+    - what is an if else statement
+- intent: method_call
+  examples: |
+    - what is a method call?
+    - method call
+    - method calls
+    - function call
+- intent: method_ex
+  examples: |
+    - method example
+    - example of a method

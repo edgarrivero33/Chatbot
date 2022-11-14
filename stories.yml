@@ -106,3 +106,76 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
+- story: if_statement_happy_path
+  steps:
+  - intent: if_statements
+  - action: utter_if_statement_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: if_statement_sad_path
+  steps:
+  - intent: if_statements
+  - action: utter_if_statement_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: if_statement_ex_happy_path
+  steps:
+    - intent: if_statement_ex
+    - action: utter_if_statement_ex2
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: if_statement_ex_sad_path
+  steps:
+    - intent: if_statement_ex
+    - action: utter_if_statement_ex2
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: if_else_happy_path
+  steps:
+    - intent: if_else_statement
+    - action: utter_if_else_ex
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: if_else_sad_path
+  steps:
+    - intent: if_else_statement
+    - action: utter_if_else_ex
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: method_call_exp_happy_path
+  steps:
+    - intent: method_call
+    - action: utter_method_call_explanation
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: method_call_exp_sad_path
+  steps:
+    - intent: method_call
+    - action: utter_method_call_explanation
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: method_ex_happy_path
+  steps:
+    - intent: method_ex
+    - action: utter_method_ex
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: method_ex_sad_path
+  steps:
+    - intent: method_ex
+    - action: utter_method_ex
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+
+
+

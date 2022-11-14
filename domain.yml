@@ -15,6 +15,11 @@ intents:
   - boolean
   - switch_statement
   - variable_declaration
+  - if_statements
+  - if_statement_ex
+  - if_else_statement
+  - method_call
+  - method_ex
 actions:
   - action_show_time
 responses:
@@ -73,6 +78,33 @@ responses:
 
     ex:\n
     int score;"
+  utter_if_statement_ex:
+  - text: "If statements are logical blocks used within programming.\nThey’re conditional statements that tell a computer what to do with certain information. In other words, they let a program make ‘decisions’ while it’s running.\n
+  \nA good way to think of the if statement is as a true or false question. They ask the program if something is true, and tell it what to do next based on the answer."
+  utter_if_statement_ex2:
+  - text: "int x = 5;\n
+  if(x > 0) {\n
+    System.out.println(true);\n
+  }"
+  utter_if_else_ex:
+  - text: "The if/else statement executes a block of code if a specified condition is true. If the condition is false, another block of code can be executed.\nThe if/else statement is a part of JavaScript's Conditional Statements, which are used to perform different actions based on different conditions.\n
+
+  int x = 5;\n
+
+  if(x > 0) {\n
+      System.out.println(true);\n
+  }\n
+  else {\n
+      System.out.println(false)\n
+  }"
+  utter_method_call_explanation:
+    - text: "A function call is an expression that passes control and arguments (if any) to a function and has the form: expression (expression-listopt) where expression is a function name or evaluates to a function address and expression-list is a list of expressions (separated by commas)."
+  utter_method_ex:
+    - text: "public static int sum(int x, int y) {\n
+    return x + y;\n
+    }\n"
+
+
 
 
   utter_operations_menu:
