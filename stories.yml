@@ -1,0 +1,45 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: menu
+  steps:
+  - intent: main_menu
+  - action: utter_main_menu
+- story: current_time
+  steps:
+  - intent: give_time
+  - action: action_show_time
+- story: linked_list_traversal_happy_path
+  steps:
+  - intent: linked_list_traversal
+  - action: utter_linked_list_traversal_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
