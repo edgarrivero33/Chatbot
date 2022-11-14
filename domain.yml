@@ -20,6 +20,20 @@ intents:
   - if_else_statement
   - method_call
   - method_ex
+  - overloading_overriding_difference
+  - method_exp
+  - class_definition
+  - class_structure
+  - class_object_diff
+  - array_ex
+  - array_initialization
+  - array_declaration
+  - stack_exp
+  - queue_exp
+  - data_types_variables_menu
+  - conditional_statements_menu
+  - data_structures_menu
+  - methods_and_calls_menu
 actions:
   - action_show_time
 responses:
@@ -45,6 +59,33 @@ responses:
   utter_main_menu:
   - text: "These are the options to choose from:\nBasic Operations\nVariables\nMethods\nif and else statements\nfor loops\nwhile loops\nScanner\nSwitch statements
   \nRecursion\nArrays\nObjects\nData structures\nPlease tell me what you would like to learn more about."
+  utter_data_types_variables_menu:
+  - text: "We have primitive datatypes\n
+    Booleans\n
+    How to declare variables\n
+    What would you like to learn about?\n"
+  utter_conditional_statements_menu:
+  - text: "We have if statements\n
+    if-else statements\n
+    switch cases\n
+    examples\n
+    What would you like to learn about?\n"
+  utter_data_structures_menu:
+  - text: "We have arrays\n
+    queues\n
+    linked-lists\n
+    stack\n
+    examples\n
+    What would you like to learn about?\n"
+  utter_methods_and_calls_menu:
+    - text: "We have definition of a Method\n
+    Method examples\n
+    Method overloading and method overriding\n
+    definition of a method call\n
+    What would you like to learn about?"
+
+
+
   utter_linked_list_traversal_ex:
   - text: "A linked list is represented by a pointer to the first node of the linked list. The first node is called the head of the linked list. If the linked list is empty, then the value of the head points to NULL.\nEach node in a list consists of at least two parts:\nA Data Item (we can store integer, strings, or any type of data).\nPointer (Or Reference) to the next node (connects one node to another) or An address of another node\nHere is an example of how traversal is done to print the linked list.\n
    def printList(self):\n
@@ -103,40 +144,98 @@ responses:
     - text: "public static int sum(int x, int y) {\n
     return x + y;\n
     }\n"
+  utter_overloading_overriding_difference:
+    - text: "Overriding occurs when the method signature is the same in the superclass \nand the child class. Overloading occurs when two or more methods in the \nsame class have the same name but different parameters (method signatures)\n"
+  utter_method_exp:
+    - text: "A method is a block of code which only runs when it is called. You can pass \ndata, known as parameters, into a method. Methods are used to perform \ncertain actions, and they are also known as functions\n "
+  utter_class_definition:
+    - text: "A class is a basic building block. It can be defined as template that describes \nthe data and behaviour associated with the class instantiation. Instantiating \nis a class is to create an object (variable) of that class that can be used to \naccess the member variables and methods of the class.\n
+
+A class can also be called a logical template to create the objects that share common properties and methods.\n
+
+For example, an Employee class may contain all the employee details in the \nform of variables and methods. If the class is instantiated i.e. if an object of \nthe class is created (say e1), we can access all the methods or properties of \nthe class.\n
+
+Modifiers: A class can be public or has default access.\n
+class keyword: The class keyword is used to create a class.\n
+Class name: The name must begin with an initial letter (capitalized by convention).\n
+Superclass (if any): The name of the class's parent (superclass), if any, \npreceded by the keyword extends. A class can only extend (subclass) one parent.\n
+Interfaces (if any): A comma-separated list of interfaces implemented by the \nclass, if any, preceded by the keyword implements. A class can implement\n more than one interface.\n
+Body: The class body surrounded by braces, { }.\n
 
 
+// class definition  \n
+public class Calculate { \n
+
+   // instance variables  \n
+   int a;  \n
+   int b;  \n
+
+   // constructor to instantiate \n
+   public Calculate (int x, int y) {  \n
+      this.a = x;  \n
+      this.b = y;  \n
+   }  \n
+
+   // method to add numbers  \n
+   public int add () {  \n
+      int res = a + b;  \n
+      return res;  \n
+   }\n
+}\n"
+  utter_class_structure:
+    - text: "Attributes and methods"
+  utter_class_object_diff:
+    - text: "Classes and Objects are basic concepts of Object Oriented Programming that \nrevolve around real life entities.\n
+  A class is a user defined blueprint or prototype from which objects are \ncreated. It represents the set of properties or methods that are common to \nall objects of one type. When an object of a class is created, the class is said\n to be instantiated. All the instances share the attributes and the \nbehavior of the class. But the values of those attributes, i.e. the state are \nunique for each object. A single class may have any number of instances.\n"
+  utter_array_ex:
+    - text: "An array is a collection of items of same data type stored at contiguous memory locations. \n
+    This makes it easier to calculate the position of each element by simply adding\n an offset to a base value, i.e., the memory location of the first \nelement of the array (generally denoted by the name of the array). The base\n value is index 0 and the difference between the two indexes is the offset.\n"
+  utter_array_initialization:
+    - text: "By passing specific values within the initializer: One can initialize the array by \ndefining the size of the array and passing specific values within the initializer. \n
+
+    int arr[ 5 ] = {  };\n
+
+    int arr[ 5 ] = { 1 , 2 , 3 , 4 , 5 };\n"
+  utter_array_declaration:
+    - text: "<datatype> [] variable_name = new <datatype>[integer size of array];\n
+    ex.\n
+    int [] arr = new int[5];\n "
+  utter_stack_exp:
+    - text: "A stack is a conceptual structure consisting of a set of homogeneous elements \n and is based on the principle of last in first out (LIFO). It is a commonly\n used abstract data type with two major operations, namely push and pop. \nPush and pop are carried out on the topmost element, which is the item \nmost recently added to the stack. The push operation adds an element to \nthe stack while the pop operation removes an element from the top\n position. The stack concept is used in programming and memory organization\n in computers.\n"
+  utter_queue_exp:
+    - text: "A queue is an abstract data type that holds an ordered, linear sequence of\nitems. You can describe it as a first in, first out (FIFO) structure; the first\n element to be added to the queue will be the first element to be \nremoved from the queue. New elements are added to the back or rear of the \nqueue.\n"
 
 
-  utter_operations_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_variables_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_methods_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_if_else_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_for_loop_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_while_loop_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_scanner_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_switch_statement_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_recursion_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_arrays_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_object_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_linked_list_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_stack_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_queue_menu:
-    - text: "I am a bot, powered by Rasa."
-  utter_binary_trees_menu:
-    - text: "I am a bot, powered by Rasa."
+#  utter_operations_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_variables_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_methods_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_if_else_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_for_loop_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_while_loop_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_scanner_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_switch_statement_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_recursion_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_arrays_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_object_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_linked_list_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_stack_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_queue_menu:
+#    - text: "I am a bot, powered by Rasa."
+#  utter_binary_trees_menu:
+#    - text: "I am a bot, powered by Rasa."
 
 session_config:
   session_expiration_time: 60

@@ -96,6 +96,34 @@ nlu:
     - show menu
     - what can I learn?
     - learn
+- intent: data_types_variables_menu
+  examples: |
+    - What topics can you help with related to datatypes and variables?
+    - show options for datatypes and variables
+    - datatypes and variables
+- intent: conditional_statements_menu
+  examples: |
+    - What topics can you help with related to conditional statements?
+    - conditonal statements
+    - show options for conditional statements
+- intent: data_structures_menu
+  examples: |
+    - What topics can you help with related to data structures?
+    - data structures
+    - show options for data structures
+    - help me with cs3
+- intent: methods_and_calls_menu
+  examples: |
+    - What topics can you help with related to Methods and Method calls?
+    - methods
+    - calls
+    - method calls
+
+
+
+
+
+
 - intent: give_time
   examples: |
     - what time is it?
@@ -156,3 +184,50 @@ nlu:
   examples: |
     - method example
     - example of a method
+- intent: overloading_overriding_difference
+  examples: |
+    - What is the difference between method overload and method overriding?
+    - method overload and method overriding
+- intent: method_exp
+  examples: |
+    - What is a method?
+    - method explanation
+    - explain methods
+- intent: class_definition
+  examples: |
+    - What is the definition of a class with an example?
+    - class definition
+- intent: class_structure
+  examples: |
+    - What makes up a class?
+    - class components
+    - What forms a class
+    - How do I make a class
+- intent: class_object_diff
+  examples: |
+    - What is the difference between a class and an object?
+    - classes and objects
+- intent: array_ex
+  examples: |
+    - What is an array with an example?
+    - ex of array
+    - what is an array
+    - example of an array
+- intent: array_initialization
+  examples: |
+    - How is an array initialized?
+    - Array initialization
+- intent: array_declaration
+  examples: |
+    - How is an array declared?
+    - Array declaration
+- intent: stack_exp
+  examples: |
+    - What is a stack?
+    - Explain what a stack is
+    - stack
+- intent: queue_exp
+  examples: |
+    - What is a queue?
+    - Explain what a queue is
+    - queue
