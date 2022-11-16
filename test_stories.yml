@@ -1,0 +1,396 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      not really
+    intent: deny
+  - action: utter_goodbye
+
+- story: sad path 3
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      very terrible
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      no
+    intent: deny
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot
+
+- story: menu
+  steps:
+  - intent: main_menu
+  - action: utter_main_menu
+- story: current_time
+  steps:
+  - intent: give_time
+  - action: action_show_time
+- story: linked_list_traversal_happy_path
+  steps:
+  - intent: linked_list_traversal
+  - action: utter_linked_list_traversal_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: linked_list_traversal_sad_path
+  steps:
+  - intent: linked_list_traversal
+  - action: utter_linked_list_traversal_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: primitive_data_type_happy_path
+  steps:
+  - intent: primitive_data_type
+  - action: utter_primitive_data_type_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: primitive_data_type_sad_path
+  steps:
+  - intent: primitive_data_type
+  - action: utter_primitive_data_type_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: boolean_happy_path
+  steps:
+  - intent: boolean
+  - action: utter_boolean_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: boolean_sad_path
+  steps:
+  - intent: boolean
+  - action: utter_boolean_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: swtich_statement_happy_path
+  steps:
+  - intent: switch_statement
+  - action: utter_switch_statement_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: swtich_statement_happy_path
+  steps:
+  - intent: switch_statement
+  - action: utter_switch_statement_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: variable_declaration_happy_path
+  steps:
+  - intent: variable_declaration
+  - action: utter_variable_declaration_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: variable_declaration_sad_path
+  steps:
+  - intent: variable_declaration
+  - action: utter_variable_declaration_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: if_statement_happy_path
+  steps:
+  - intent: if_statements
+  - action: utter_if_statement_ex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: if_statement_sad_path
+  steps:
+  - intent: if_statements
+  - action: utter_if_statement_ex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+- story: if_statement_ex_happy_path
+  steps:
+    - intent: if_statement_ex
+    - action: utter_if_statement_ex2
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: if_statement_ex_sad_path
+  steps:
+    - intent: if_statement_ex
+    - action: utter_if_statement_ex2
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: if_else_happy_path
+  steps:
+    - intent: if_else_statement
+    - action: utter_if_else_ex
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: if_else_sad_path
+  steps:
+    - intent: if_else_statement
+    - action: utter_if_else_ex
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: method_call_exp_happy_path
+  steps:
+    - intent: method_call
+    - action: utter_method_call_explanation
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: method_call_exp_sad_path
+  steps:
+    - intent: method_call
+    - action: utter_method_call_explanation
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: method_ex_happy_path
+  steps:
+    - intent: method_ex
+    - action: utter_method_ex
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: method_ex_sad_path
+  steps:
+    - intent: method_ex
+    - action: utter_method_ex
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: overloading_overriding_happy_path
+  steps:
+    - intent: overloading_overriding_difference
+    - action: utter_overloading_overriding_difference
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: overloading_overriding_sad_path
+  steps:
+    - intent: overloading_overriding_difference
+    - action: utter_overloading_overriding_difference
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: method_exp_happy_path
+  steps:
+    - intent: method_exp
+    - action: utter_method_exp
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: method_exp_sad_path
+  steps:
+    - intent: method_exp
+    - action: utter_method_exp
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: class_definition_happy_path
+  steps:
+    - intent: class_definition
+    - action: utter_class_definition
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: class_definition_sad_path
+  steps:
+    - intent: class_definition
+    - action: utter_class_definition
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: class_structure_happy_path
+  steps:
+    - intent: class_structure
+    - action: utter_class_structure
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: class_structure_sad_path
+  steps:
+    - intent: class_structure
+    - action: utter_class_structure
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: class_object_diff_happy_path
+  steps:
+    - intent: class_object_diff
+    - action: utter_class_object_diff
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: class_object_diff_sad_path
+  steps:
+    - intent: class_object_diff
+    - action: utter_class_object_diff
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: array_ex_happy_path
+  steps:
+    - intent: array_ex
+    - action: utter_array_ex
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: array_ex_sad_path
+  steps:
+    - intent: array_ex
+    - action: utter_array_ex
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: array_initialization_happy_path
+  steps:
+    - intent: array_initialization
+    - action: utter_array_initialization
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: array_initialization_sad_path
+  steps:
+    - intent: array_initialization
+    - action: utter_array_initialization
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: array_declaration_happy_path
+  steps:
+    - intent: array_declaration
+    - action: utter_array_declaration
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: array_declaration_sad_path
+  steps:
+    - intent: array_declaration
+    - action: utter_array_declaration
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: stack_exp_happy_path
+  steps:
+    - intent: stack_exp
+    - action: utter_stack_exp
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: stack_exp_sad_path
+  steps:
+    - intent: stack_exp
+    - action: utter_stack_exp
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: queue_exp_happy_path
+  steps:
+    - intent: queue_exp
+    - action: utter_queue_exp
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: queue_exp_sad_path
+  steps:
+    - intent: queue_exp
+    - action: utter_queue_exp
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_cheer_up
+- story: data_types_variables_menu_path
+  steps:
+    - intent: data_types_variables_menu
+    - action: utter_data_types_variables_menu
+- story: conditional_statements_menu_path
+  steps:
+    - intent: conditional_statements_menu
+    - action: utter_conditional_statements_menu
+- story: data_structures_menu_path
+  steps:
+    - intent: data_structures_menu
+    - action: utter_data_structures_menu
+- story: methods_and_calls_menu
+  steps:
+    - intent: methods_and_calls_menu
+    - action: utter_methods_and_calls_menu
