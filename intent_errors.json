@@ -1,0 +1,10 @@
+[
+  {
+    "text": "method calls",
+    "intent": "method_call",
+    "intent_prediction": {
+      "name": "methods_and_calls_menu",
+      "confidence": 0.554807722568512
+    }
+  }
+]
